@@ -11,7 +11,7 @@
     $branch = $_POST['branch'];
     $quantity = $_POST['quantity'];
     $timeSlot = $_POST['time'];
-    $code = "DSE1233"; 
+    $code = $_POST['code']; 
 
     //json array for api
     $apiData =  json_encode(array_merge($_REQUEST,["code"=>$code]));
