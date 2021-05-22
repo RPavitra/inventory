@@ -1,7 +1,7 @@
 {
   "services": [
     {
-      "code": JSTP1,
+      "code": "JSTP1",
       "name": "JFeels Studio Taman Putri",
       "branch": "Johor",
       "quantity": 1,
