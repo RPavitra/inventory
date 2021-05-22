@@ -1,0 +1,11 @@
+{
+  "services": [
+    {
+      "code": JSTP1,
+      "name": "JFeels Studio Taman Putri",
+      "branch": "Johor",
+      "quantity": 1,
+      "timeslot": "1.00pm to 3.00pm"
+    }
+  ]
+}
