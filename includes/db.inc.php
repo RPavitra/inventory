@@ -1,8 +1,8 @@
 <?php
 
-    $server = "DESKTOP-MS6VCIA"; 
-    $user = "root";   
-    $password = "abcd1234";  
+    $server = ""; 
+    $user = "";   
+    $password = "";  
     $database = "inventory"; 
 
     $connectionInfo = array( 
