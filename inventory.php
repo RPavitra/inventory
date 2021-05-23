@@ -6,7 +6,6 @@
     global $conn;
 
     // variables
-    $id = $_POST['id'];
     $name =  $_POST['name'];
     $branch = $_POST['branch'];
     $quantity = $_POST['quantity'];
@@ -14,16 +13,16 @@
     $code = $_POST['code']; 
 
     //json array for api
-    $apiData =  json_encode(array_merge($_REQUEST,["code"=>$code]));
+    $apiData =  json_encode($_REQUEST);
 
-    insertIntoServiceTable($id,$name,$branch,$quantity,$timeSlot,$apiData);
+    insertIntoServiceTable($code,$name,$branch,$quantity,$timeSlot,$apiData);
     
     // insert to db 
-    function insertIntoServiceTable($id,$name,$branch,$quantity,$timeSlot,$apiData)
+    function insertIntoServiceTable($code,$name,$branch,$quantity,$timeSlot,$apiData)
     {
         // inserting into db
         $sql = "INSERT INTO service VALUES(?,?,?,?,?)";
-        $values = array($id,$name,$branch,$quantity,$timeSlot);
+        $values = array($code,$name,$branch,$quantity,$timeSlot);
         $query = sqlsrv_query($GLOBALS['conn'],$sql,$values);
 
         // dies if query fails
